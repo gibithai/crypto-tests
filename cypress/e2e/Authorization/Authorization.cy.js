@@ -1,5 +1,3 @@
-const { assert } = require("console")
-
 describe ('Authorization', () => {
   const username = 'dougcarlin@tut.by'
   const userpassword = 'j7878745g655756755'
@@ -8,6 +6,7 @@ describe ('Authorization', () => {
     cy.visit('https://walletallin.com/')
     cy.xpath('//a[normalize-space()="Login"]').click()
     cy.visit('https://wallet.walletallin.com/')
+    cy.url().should('include', 'walletallin.com')
     cy.get('#email').type(username)
     cy.get('#password').type(userpassword)
     cy.xpath('//button[@id=":r2:"]').click()
@@ -23,10 +22,10 @@ describe ('Authorization', () => {
 
       //BDD
       expect(actName).to.equal(expName)
-      expect(actName).not.to.equal(expName)
+      //expect(actName).not.to.equal(expName)
       //TDD
       assert.equal(actName, expName)
-      assert.notEqual(actName, expName)
+      //assert.notEqual(actName, expName)
 
     })  
   })  

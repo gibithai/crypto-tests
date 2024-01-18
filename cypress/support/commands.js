@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+const { assert } = require("console");
+
+Cypress.Commands.add("customAssertion", () => {
+  // Ваш код с assert
+  // ...
+});
