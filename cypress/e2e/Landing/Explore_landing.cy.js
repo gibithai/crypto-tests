@@ -2,7 +2,7 @@ describe ('Explore Landing Page', () => {
 
   it ('Check the title', ()=>{
     cy.visit('https://walletallin.com/')
-    cy.title().should('eq', 'Compliance and Anti Money Laundering software')
+    cy.title().should('eq', 'Compliance and AML software')
   })
   it ('Logo check', ()=>{
     cy.visit('https://walletallin.com/')

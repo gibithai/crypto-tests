@@ -19,14 +19,13 @@ describe ('Authorization', () => {
     .then(   (ko)=>{
 
       let actName=ko.text()
-
       //BDD
       expect(actName).to.equal(expName)
       //expect(actName).not.to.equal(expName)
       //TDD
       assert.equal(actName, expName)
       //assert.notEqual(actName, expName)
-
+      
     })  
   })  
 })
